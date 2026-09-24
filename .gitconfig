@@ -1,0 +1,27 @@
+[core]
+	editor = \"D:\\Program Files\\Microsoft VS Code\\Code.exe\" --wait
+	autocrlf = false
+	fileMode = false
+	pager = cat
+	excludesfile = ~/.gitignore
+[diff]
+	renames = copies
+	renameLimit = 100
+[http]
+	sslbackend = schannel
+[credential "https://gh-proxy.com"]
+	provider = generic
+
+[http]
+	proxy = 192.168.0.155:8080
+[https]
+	proxy = 192.168.0.155:8080
+
+[url "https://gh-proxy.com/github.com/"]
+	insteadOf = https://github.com/
+
+
+
+
+
+
