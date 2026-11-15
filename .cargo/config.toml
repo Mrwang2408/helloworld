@@ -6,11 +6,11 @@ target-dir = "E:\\RenderDragon\\REPO\\.cargo\\target"
 codegen-units = 1
 debug = false
 # inherits = "release"
-lto = true
+lto = "fat"
 opt-level = "s"
 panic = "abort"
-strip = true
-trim-paths = false
+strip = "symbols"
+trim-paths = "none"
 
 [profile.smol]
 inherits = "release"
@@ -47,4 +47,8 @@ rustflags = ["-C", "linker-flavor=gcc"]
 [unstable]
 # build-std = ["std", "panic_abort"]
 panic-immediate-abort = true
-trim-paths = true
+# trim-paths = true
+
+[env]
+CC_aarch64_linux_android = "D:\\CMDplus\\android-ndk-r26d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\aarch64-linux-android26-clang.cmd"
+CXX_aarch64_linux_android = "D:\\CMDplus\\android-ndk-r26d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\aarch64-linux-android26-clang++.cmd"

@@ -12,7 +12,7 @@ echo aarch64-linux-android
 
 cargo +nightly build --target aarch64-linux-android --profile smol -Z build-std=std,panic_abort
 
-copy E:\RenderDragon\REPO\.cargo\target\aarch64-linux-android\smol\deps\lib%PROJECT%.so .\target\lib%TARGET%.so
+copy E:\RenderDragon\REPO\.cargo\target\aarch64-linux-android\smol\lib%PROJECT%.so .\target\lib%TARGET%.so
 pause
 goto :begin
 
@@ -23,7 +23,7 @@ echo arm-linux-androideabi
 
 cargo +nightly build --target armv7-linux-androideabi --profile smol -Z build-std=std,panic_abort
 
-copy E:\RenderDragon\REPO\.cargo\target\armv7-linux-androideabi\smol\deps\lib%PROJECT%.so .\target\lib%TARGET%-arm.so
+copy E:\RenderDragon\REPO\.cargo\target\armv7-linux-androideabi\smol\lib%PROJECT%.so .\target\lib%TARGET%-arm.so
 pause
 goto :begin
 
